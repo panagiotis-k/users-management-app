@@ -1,0 +1,40 @@
+body {
+	box-sizing: border-box;
+}
+
+.form-control {
+	width: 70%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 2rem auto;
+	border: 1px solid black;
+	border-radius: 10px;
+	box-shadow: 0.9px 0.9px 0.9px black;
+}
+
+.form-control div {
+	text-align: left;
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	margin: 0.6rem 0;
+	width: 600px;
+	max-width: 90%;
+}
+
+.form-control div input {
+	height: 30px;
+	font-size: 1.2rem;
+	margin: 0.5rem 0;
+	line-height: 1.5rem;
+	outline: none;
+	padding: 0.8rem;
+	box-sizing: border-box;
+}
+
+.form-control div input:focus {
+	border: 1px solid rgb(233, 168, 233);
+}

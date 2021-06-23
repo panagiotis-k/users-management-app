@@ -1,0 +1,20 @@
+.button {
+	font-size: 1.2rem;
+	background-color: purple;
+	color: white;
+	display: block;
+	width: 100px;
+	margin: 0 0 0.5rem 0;
+	padding: .3rem;
+}
+
+.button:hover {
+	cursor: pointer;
+	background-color: rgb(163, 38, 163);
+}
+
+/* @media (min-width: 300px) {
+	.button {
+		width: auto;
+	}
+} */

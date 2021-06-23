@@ -1,0 +1,33 @@
+.user {
+	margin: 0.8rem;
+	border: 1px double gray;
+	border-radius: 8px;
+	width: 90%;
+	text-align: left;
+	padding: .4rem;
+}
+
+.user li {
+	list-style: none;
+}
+
+.user span.icon {
+	display: float;
+	float: right;
+	line-height: 25px;
+	height: 25px;
+	width: 20px;
+	padding: 1px;
+	text-align: center;
+	color: white;
+	background-color: red;
+	border-radius: 3px;
+	margin-right: right;
+	transition: background 0.5s;
+}
+
+.user span.icon:hover {
+	cursor: pointer;
+	background-color: white;
+	color: red;
+}

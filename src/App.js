@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import FormInput from './components/FormInput';
+import UserList from './components/UserList';
+import './Bootstrap.css';
+import styles from './App.module.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	const [ users, setUsers ] = useState([]);
+	const deleteItemHandler = (uId) => {
+		setUsers((prevUsers) => {
+			const newUsers = prevUsers.filter((user) => user.id !== uId);
+			return newUsers;
+		});
+	};
+
+	const getUser = (uName, uAge) => {
+		setUsers((prevUsers) => {
+			return [ ...prevUsers, { username: uName, age: uAge, id: Math.random().toString() } ];
+		});
+	};
+
+	return (
+		<div className={styles.App}>
+			<FormInput newUser={getUser} />
+			<UserList items={users} onDelete={deleteItemHandler} />
+		</div>
+	);
+};
 
 export default App;
